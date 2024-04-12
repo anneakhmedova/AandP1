@@ -1,5 +1,5 @@
 import json
-with open('4.json', 'r', encoding='utf-8') as f:
+with open('4.json', 'r', encoding='utf-8') as f: #кодировка
     d = json.load(f)
 a = input('Введите страну:')
 b = input('Введите столицу:')
@@ -14,8 +14,5 @@ else:
         d[b]=a
     else:
         print('Ошибка')
-
-
-
-with open('4.json', 'w',encoding='utf-8') as f:
-    json.dump(d, f, indent=4, ensure_ascii=False)
+with open('4.json', 'w',encoding='utf-8') as f: #кодировка
+    json.dump(d, f,indent=4, ensure_ascii=False) #внешний вид и отключение замены кириллицы на \uXXXX
