@@ -48,6 +48,13 @@ def text(message):
         markup = types.InlineKeyboardMarkup()
         markup.add(types.InlineKeyboardButton("Скачать", url="https://cloud.mail.ru/public/SV9L/CpduMZKy5"))
         bot.send_message(message.chat.id, opisanie, reply_markup=markup)
+    elif message.text == 'Рио':
+        file1 = open('2.webp', 'rb')
+        opisanie = ""
+        bot.send_photo(message.chat.id, file1)
+        markup = types.InlineKeyboardMarkup()
+        markup.add(types.InlineKeyboardButton("Скачать", url="https://cloud.mail.ru/public/jQKj/ELHvPAmBL"))
+        bot.send_message(message.chat.id, opisanie, reply_markup=markup)
     else:
         second_mess = "Такого фильма еще нет в наличии"
         markup = types.InlineKeyboardMarkup()
